@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TopDownMovement : MonoBehaviour
 {
@@ -8,16 +9,20 @@ public class TopDownMovement : MonoBehaviour
 
     private Vector2 movementDirection = Vector2.zero;
 
+    private Text text;
+
     private void Awake()
     {
         movementController = GetComponent<TopDownController>();
         movementRigidbody = GetComponent<Rigidbody2D>();
+        text = GetComponentInChildren<Text>();
     }
 
     private void Start()
     {
         movementController.OnMoveEvent += Move;
         movementController.OnJumpEvent += Jump;
+        text.text = CharacterManager.name;
     }
 
     private void FixedUpdate()
