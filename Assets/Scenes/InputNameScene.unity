@@ -1095,7 +1095,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   penguin: {fileID: 117060333}
-  kNight: {fileID: 959943988}
+  knight: {fileID: 959943988}
 --- !u!1 &1639999809
 GameObject:
   m_ObjectHideFlags: 0

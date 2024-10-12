@@ -3,19 +3,19 @@
 public class CharacterSetActive : MonoBehaviour
 {
     [SerializeField] private GameObject penguin;
-    [SerializeField] private GameObject kNight;
+    [SerializeField] private GameObject knight;
 
     public void Awake()
     {
         if(CharacterManager.characterNumber == 1)
         {
             penguin.SetActive(true);
-            kNight.SetActive(false);
+            knight.SetActive(false);
         }
         else
         {
             penguin.SetActive(false);
-            kNight.SetActive(true);
+            knight.SetActive(true);
         }
     }
 }

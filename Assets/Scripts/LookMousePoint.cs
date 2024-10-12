@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class LookMousePoint : MonoBehaviour
 {
-    [SerializeField] private SpriteRenderer characterRangerer;
+    [SerializeField] private SpriteRenderer penguinRangerer;
+    [SerializeField] private SpriteRenderer knightRangerer;
 
     private TopDownController controller;
 
@@ -26,6 +27,14 @@ public class LookMousePoint : MonoBehaviour
     {
         float rotZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        characterRangerer.flipX = Mathf.Abs(rotZ) > 90;
+        if(CharacterManager.characterNumber == 1)
+        {
+            penguinRangerer.flipX = Mathf.Abs(rotZ) > 90;
+        }
+        else
+        {
+            knightRangerer.flipX = Mathf.Abs(rotZ) > 90;
+        }
+        
     }
 }

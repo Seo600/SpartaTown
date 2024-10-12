@@ -7,6 +7,8 @@ public class CharacterManager : MonoBehaviour
     public static string name ;
     public static int characterNumber = 1;
 
+    
+
     private void Awake()
     {
         if (instance == null)
