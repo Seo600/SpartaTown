@@ -15,5 +15,6 @@ public class PlayerName : MonoBehaviour
     public void SaveName()
     {
         CharacterManager.name = inputFieldName.text;
+        inputFieldName.text = "";
     }
 }

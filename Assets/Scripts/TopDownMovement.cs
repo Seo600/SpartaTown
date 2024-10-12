@@ -25,6 +25,13 @@ public class TopDownMovement : MonoBehaviour
         text.text = CharacterManager.name;
     }
 
+    private void Update()
+    {
+        if(CharacterManager.name != text.text){
+            text.text = CharacterManager.name;
+        }
+    }
+
     private void FixedUpdate()
     {
         ApplyMovement(movementDirection);
