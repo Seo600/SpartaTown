@@ -12,9 +12,15 @@ public class PlayerName : MonoBehaviour
         inputFieldName = GetComponent<InputField>();
     }
 
+    public void StopTime()
+    {
+        Time.timeScale = 0;
+    }
+
     public void SaveName()
     {
         CharacterManager.name = inputFieldName.text;
         inputFieldName.text = "";
+        Time.timeScale = 1;
     }
 }
